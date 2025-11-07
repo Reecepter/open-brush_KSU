@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkyboxChanger : MonoBehaviour
 {
-    public Material[] skyboxes; // Assign different skybox materials in the Inspector
+    public Material[] skyboxes;
     private int currentIndex = 0;
 
     private void Update()
@@ -19,6 +19,6 @@ public class SkyboxChanger : MonoBehaviour
     {
         currentIndex = (currentIndex + 1) % skyboxes.Length;
         RenderSettings.skybox = skyboxes[currentIndex];
-        DynamicGI.UpdateEnvironment(); // Updates lighting if needed
+        DynamicGI.UpdateEnvironment();
     }
 }
