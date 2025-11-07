@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class SkyboxChanger : MonoBehaviour
 {
-    public Material[] skyboxes;
-    private int currentIndex = 0;
+    public Material[] skyboxes; // Assign skybox materials in Inspector
 
-    private void Update()
+    public void ChangeSkybox(int index)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (skyboxes == null || skyboxes.Length == 0)
         {
-            ChangeSkybox();
+            Debug.LogWarning("Skybox list is empty or not assigned!");
+            return;
         }
-    }
 
-    public void ChangeSkybox()
-    {
-        currentIndex = (currentIndex + 1) % skyboxes.Length;
-        RenderSettings.skybox = skyboxes[currentIndex];
-        DynamicGI.UpdateEnvironment();
+        if (index >= 0 && index < skyboxes.Length)
+        {
+            Debug.Log("button clicked");
+            RenderSettings.skybox = skyboxes[index];
+            DynamicGI.UpdateEnvironment();
+        }
+        else
+        {
+            Debug.LogWarning("Index out of range for skybox list: " + index);
+        }
     }
 }
