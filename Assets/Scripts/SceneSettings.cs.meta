@@ -3,7 +3,8 @@ guid: 600668d79d264c146a1f8eb547abfcc6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_SkyboxMaterial: {fileID: 2100000, guid: f83396af11a817849ae15c8b96bfeb62, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
