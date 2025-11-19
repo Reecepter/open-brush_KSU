@@ -7,7 +7,13 @@ public class SkyboxChanger : MonoBehaviour
     public Material[] skyboxes; // Assign skybox materials in Inspector
     public Transform[] buttonTransforms;
     public GameObject buttonHighlight;
+    public GameObject bubbles;
     private int currentIndex = 0;
+
+    private void Start()
+    {
+        bubbles.SetActive(false);
+    }
 
     private void Update()
     {
@@ -33,7 +39,15 @@ public class SkyboxChanger : MonoBehaviour
         if (index >= 0 && index < skyboxes.Length)
         {
             Debug.Log("button clicked");
-            RenderSettings.skybox = skyboxes[index];
+            if (index == 0)
+            {
+                bubbles.SetActive(true);
+            }
+            else
+            {
+                bubbles.SetActive(false);
+            }
+                RenderSettings.skybox = skyboxes[index];
             buttonHighlight.transform.position = buttonTransforms[index].transform.position;
             DynamicGI.UpdateEnvironment();
         }
