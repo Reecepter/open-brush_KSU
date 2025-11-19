@@ -578,6 +578,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 942522145223717062, guid: 1577a57241991c54894d884e4e8164ba,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4743770588809958394, guid: 1577a57241991c54894d884e4e8164ba,
         type: 3}
       propertyPath: m_Pivot.x
@@ -682,6 +687,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110575204649149743, guid: 1577a57241991c54894d884e4e8164ba,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110575204649149743, guid: 1577a57241991c54894d884e4e8164ba,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110575204649149743, guid: 1577a57241991c54894d884e4e8164ba,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
