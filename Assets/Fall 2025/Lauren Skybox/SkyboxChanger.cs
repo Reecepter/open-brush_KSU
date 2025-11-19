@@ -8,7 +8,8 @@ public class SkyboxChanger : MonoBehaviour
     public Transform[] buttonTransforms;
     public GameObject buttonHighlight;
     public GameObject bubbles;
-    public AudioSource[] music;
+    public AudioSource music;
+    public AudioClip[] musicClip;
     private int currentIndex = 0;
 
     private void Start()
@@ -49,12 +50,10 @@ public class SkyboxChanger : MonoBehaviour
             }
             RenderSettings.skybox = skyboxes[index];
 
-            for (int i = 0; i < music.Length; i++)
-            {
-                if (music[i].isPlaying)
-                    music[i].Stop();
-            }
-            music[index].Play();
+            if (music.isPlaying)
+                music.Stop();
+            music.clip = musicClip[index];
+            music.Play();
 
             buttonHighlight.transform.position = buttonTransforms[index].transform.position;
 
