@@ -8,6 +8,7 @@ public class SkyboxChanger : MonoBehaviour
     public Transform[] buttonTransforms;
     public GameObject buttonHighlight;
     public GameObject bubbles;
+    public AudioSource[] music;
     private int currentIndex = 0;
 
     private void Start()
@@ -35,7 +36,6 @@ public class SkyboxChanger : MonoBehaviour
             Debug.LogWarning("Skybox list is empty or not assigned!");
             return;
         }
-
         if (index >= 0 && index < skyboxes.Length)
         {
             Debug.Log("button clicked");
@@ -47,8 +47,17 @@ public class SkyboxChanger : MonoBehaviour
             {
                 bubbles.SetActive(false);
             }
-                RenderSettings.skybox = skyboxes[index];
+            RenderSettings.skybox = skyboxes[index];
+
+            for (int i = 0; i < music.Length; i++)
+            {
+                if (music[i].isPlaying)
+                    music[i].Stop();
+            }
+            music[index].Play();
+
             buttonHighlight.transform.position = buttonTransforms[index].transform.position;
+
             DynamicGI.UpdateEnvironment();
         }
         else
