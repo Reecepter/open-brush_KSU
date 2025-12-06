@@ -25,6 +25,7 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.vectorgraphics": "https://github.com/icosa-mirror/com.unity.vectorgraphics.git#open-brush",
     "com.unity.xr.core-utils": "2.3.0",
+    "com.unity.xr.interaction.toolkit": "2.5.4",
     "com.unity.xr.management": "4.4.1",
     "com.unity.xr.oculus": "4.2.0",
     "com.unity.xr.openxr": "1.11.0",
