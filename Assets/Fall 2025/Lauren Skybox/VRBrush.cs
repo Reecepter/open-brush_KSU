@@ -19,11 +19,11 @@ public class VRBrush : MonoBehaviour
 
     void Start()
     {
-        var test = Instantiate(strokePrefab, Vector3.zero, Quaternion.identity);
-        var lr = test.GetComponent<LineRenderer>();
-        lr.positionCount = 2;
-        lr.SetPosition(0, new Vector3(0, 1, 0));
-        lr.SetPosition(1, new Vector3(0, 1, 2));
+        //var test = Instantiate(strokePrefab, Vector3.zero, Quaternion.identity);
+        //var lr = test.GetComponent<LineRenderer>();
+        //lr.positionCount = 2;
+        //lr.SetPosition(0, new Vector3(0, 1, 0));
+        //lr.SetPosition(1, new Vector3(0, 1, 2));
     }
 
     void Update()
