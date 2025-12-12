@@ -125,5 +125,5 @@ Material:
     - _SkyboxRotation: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SunTint: {r: 1, g: 0.925, b: 0.737, a: 1}
-    - _Tint: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
+    - _Tint: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
